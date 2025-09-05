@@ -1,0 +1,44 @@
+*{
+ margin: 0;
+ padding: 0; 
+ box-sizing: border-box;
+}
+
+.container{
+  margin : 100px;
+  background: green;
+  border: 10px solid black; 
+  display: flex;
+  flex-wrap: wrap;
+}
+.container div 
+{
+  height: 100%;
+  height: 400px;
+  flex-grow: 1;
+  width: 300px;
+  /* width: 300px; */
+}
+.box1 {
+  background: green;
+  /* flex-grow: 1; */
+}
+.box2{
+  background: hotpink;
+  /* flex-grow: 2; */
+}
+.box3
+{
+  background: gold;
+  /* flex-grow: 1; */
+
+}
+.box4 {
+  background: paleturquoise;
+  /* flex-grow: 1; */
+
+}
+.box5{
+  background: crimson;
+  /* flex-grow: 1; */
+}
