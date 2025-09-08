@@ -3,48 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive - landing Page</title>
+    <title>Responsive Design</title>
 
-    <!-- applying remix cdn  -->
+    <!-- linking External css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- linking the Icon cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main>
-      <nav>
-        <a href="">sautaboy</a>
-        <div>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-          <a href="">Gallery</a>
-          <a href="">Profile</a>
-          <i class="ri-menu-line"></i>
-        </div>
-      </nav>
+    <!-- header includes teh the nav and logo -->
+    <header>
+      <div class="container">
+        <a href="">Responsive</a>
 
-      <article>
-        <div class="left">
-          <h1>
-            How you make Responsive
-            <span> Website</span>
-          </h1>
+        <!-- this show the menu -->
+        <input type="checkbox" class="show-menu" id="checkbox" />
+        <nav class="nav-links">
+          <!-- close menu  -->
+          <label for="checkbox">
+            <svg
+              id=""
+              class="close-menu"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+              ></path>
+            </svg>
+          </label>
+
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- menu icon -->
+        <label for="checkbox">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </label>
+      </div>
+    </header>
+
+    <!-- main content starts from here -->
+    <main>
+      <section>
+        <div class="container left">
+          <h1>What is <strong>Responsive </strong> Design ?</h1>
           <p>
-           Responsive web design (RWD) is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. It is the way to design for a multi-device web. In this article, we'll help you understand some techniques that can be used to master it.
+            Responsive web design (RWD) is a web development approach that
+            creates a single, flexible website that automatically adapts to
+            different screen sizes, platforms, and orientations. This ensures
+            that the site is visually appealing and functional whether it's
+            viewed on a desktop, tablet, or smartphone, without the need for
+            separate versions for each device.
           </p>
-          <button>Explore Now</button>
+          <button>Explore More</button>
         </div>
-        <div class="right">
+
+        <div class="container right">
           <img
-            src="https://www.webfx.com/wp-content/uploads/2021/10/iStock-612224522.jpg"
+            src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSSResponsiveDesign_1.jpg"
             alt=""
           />
         </div>
-      </article>
+      </section>
     </main>
   </body>
 </html>
