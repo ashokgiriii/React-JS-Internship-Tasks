@@ -1,0 +1,5 @@
+-- flex box 
+-- Grid
+-- Make chnage in diffrent Screen Size
+
+-- Make a Responsive Navbar 

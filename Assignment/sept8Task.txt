@@ -1,0 +1,66 @@
+
+## CSS Exercises
+
+1. Play with Positioning
+
+   * Practice static, relative, absolute, fixed, and sticky.
+   * Create a few boxes and position them differently using CSS.
+
+2. Play with Modal Pop-up (Only CSS)
+
+   * Create a modal pop-up that appears when a button is clicked.
+   * Do not use JavaScript; use \:target or checkbox + label tricks.
+
+3. nth-child()
+
+   * Style elements differently using \:nth-child().
+   * For example, color every 3rd element differently.
+
+4. Table Design
+
+   * Design a table where even rows have one color and odd rows have another color.
+   * Use nth-child(even) and nth-child(odd) selectors.
+
+5. Play with z-index
+
+   * Create overlapping boxes and control which box appears on top using z-index.
+
+6. Go with the flow (Parent then Child)
+
+   * Experiment with how parent positioning affects child elements.
+   * Use position: relative on parent and absolute on child to see the effect.
+
+---
+
+## JavaScript Exercise
+
+You are given an array of objects representing people:
+
+{name: "Ashok", age: 23, gender: "male", skills: "Developer"}
+
+The array should contain at least 15 objects with different names, ages, genders, skills, and birth years.
+
+Tasks:
+
+1. Calculate the average age of all people.
+2. Find the average age by gender.
+3. Filter out all people older than 25.
+4. Using the Date object, check if a person is Gen Z (born between 1997–2012).
+
+   * Assume each object has a birthYear property.
+   * Write a function to determine Gen Z status.
+
+Example Array Structure:
+\[
+{name: "Ashok", age: 23, gender: "male", skills: "Developer", birthYear: 2000},
+{name: "Sita", age: 21, gender: "female", skills: "Designer", birthYear: 2002},
+// ... add at least 13 more objects
+]
+
+Hints:
+
+* Use Array.prototype.reduce() to calculate averages.
+* Use Array.prototype.filter() to filter out people.
+* Use new Date().getFullYear() to get the current year.
+
+---
