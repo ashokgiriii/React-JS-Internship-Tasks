@@ -1,5 +1,28 @@
--- flex box 
--- Grid
--- Make chnage in diffrent Screen Size
 
--- Make a Responsive Navbar 
+
+## CSS Exercises
+
+1. Flexbox
+
+   * Practice using `display: flex`.
+   * Align items horizontally and vertically using `justify-content` and `align-items`.
+   * Experiment with `flex-direction`, `flex-wrap`, and `flex-grow`.
+
+2. Grid
+
+   * Practice using `display: grid`.
+   * Create different layouts with `grid-template-columns` and `grid-template-rows`.
+   * Use `gap`, `grid-column`, and `grid-row` to arrange items.
+
+3. Make Changes in Different Screen Sizes
+
+   * Use media queries (`@media`) to make your layout responsive.
+   * Change font sizes, element positions, and colors based on screen width.
+   * Test for mobile, tablet, and desktop screens.
+
+4. Make a Responsive Navbar
+
+   * Create a navigation bar that adjusts to screen size.
+   * Use Flexbox or Grid to arrange menu items.
+   * Include a hamburger menu for smaller screens using only CSS if possible.
+
