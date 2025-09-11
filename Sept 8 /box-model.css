@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Hide the default checkbox */
+#toggle {
+  display: none;
+}
+
+/* Style for toggle button */
+.toggle-button {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* Box initially hidden */
+.box-model {
+  display: none;
+  height: fit-content;
+  width: fit-content;
+  background-color: lightcoral;
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*  box will APear when clicked  */
+#toggle:checked + .box-model {
+  display: block;
+}
+
+
+

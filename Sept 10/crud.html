@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud Operation</title>
+
+    <link rel="stylesheet" href="./crud.css" />
+  </head>
+  <body>
+    <main>
+      <h1><span class="crud-color">crud</span> Operation</h1>
+
+      <div class="crud">
+        <form class="form">
+          <input
+            id="inputUsername"
+            type="text"
+            placeholder="Enter Username"
+            name="inputUsername"
+          />
+          <input
+            id="inputEmail"
+            type="email"
+            placeholder="Enter Email"
+            name="inputEmail"
+          />
+          <input
+            id="inputAge"
+            type="number"
+            placeholder="Enter Age"
+            name="inputAge"
+          />
+
+          <button type="submit">Add Task</button>
+        </form>
+
+        <section class="list-container">
+          <table>
+            <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>K Garni ?</th>
+            </tr>
+
+            <!-- will render here  -->
+            <tbody class="data-table">
+              <!-- <tr>
+                <td>Ashok</td>
+                <td>ashok@gmail.com</td>
+                <td>22</td>
+                <td>
+                  <button >Edit</button>
+                  <button>Delete</button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

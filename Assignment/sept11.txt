@@ -1,0 +1,9 @@
+CRUD operation using javascript
+Validation using Regular Expression
+
+
+should be responsive
+data should be animated while deleteing updating indexing
+
+if in  table , table should be responsive
+ 

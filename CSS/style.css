@@ -21,24 +21,19 @@
 }
 .box1 {
   background: green;
-  /* flex-grow: 1; */
 }
 .box2{
   background: hotpink;
-  /* flex-grow: 2; */
 }
 .box3
 {
   background: gold;
-  /* flex-grow: 1; */
 
 }
 .box4 {
   background: paleturquoise;
-  /* flex-grow: 1; */
 
 }
 .box5{
   background: crimson;
-  /* flex-grow: 1; */
 }

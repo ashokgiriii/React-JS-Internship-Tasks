@@ -25,4 +25,3 @@
    * Create a navigation bar that adjusts to screen size.
    * Use Flexbox or Grid to arrange menu items.
    * Include a hamburger menu for smaller screens using only CSS if possible.
-
