@@ -8,5 +8,5 @@ data should be animated while deleteing updating indexing
 if in  table , table should be responsive
 
 
-.
+
  
