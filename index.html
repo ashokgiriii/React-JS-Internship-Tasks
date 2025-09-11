@@ -3,9 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Task Navigator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f6f8;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        font-size: 28px;
+        color: #2c3e50;
+      }
+
+      .link {
+        display: block;
+        margin: 15px 0;
+        padding: 12px 20px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+      }
+
+      .link:hover {
+        background-color: #2980b9;
+      }
+    </style>
   </head>
   <body>
-    hello
+    <div class="container">
+      <h1>📅 Internship Task Links</h1>
+
+      <a
+        class="link"
+        href="https://ashokgiriii.github.io/React-JS-Internship-Tasks/Sept 8/boxmodel.html"
+      >
+        📦 Sept 8 - Box Model
+      </a>
+
+      <a
+        class="link"
+        href="https://ashokgiriii.github.io/React-JS-Internship-Tasks/Sept 9/index.html"
+      >
+        🧩 Sept 9 - JS Modules
+      </a>
+
+      <a
+        class="link"
+        href="https://ashokgiriii.github.io/React-JS-Internship-Tasks/Sept 10/crud.html"
+      >
+        📝 Sept 10 - CRUD App
+      </a>
+
+      <a
+        class="link"
+        href="https://ashokgiriii.github.io/React-JS-Internship-Tasks/Sept 11/index.html"
+      >
+        🎨 Sept 11 - Form & Styles Crud Responsive Table
+      </a>
+    </div>
   </body>
 </html>
