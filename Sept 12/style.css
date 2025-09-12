@@ -1,0 +1,192 @@
+:root {
+  --bodyBg: #222831;
+  --gray: #393e46;
+  --navy: #00adb5;
+  --fadeWhite: #eeeeee;
+  --danger: red;
+  --waring: yellow;
+  --grey: gray;
+  --hoverWhite: #5c5b5b92;
+  --black: black;
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* optional button shape hai yo  */
+span.button {
+  padding: 0.5rem 1rem;
+  font-size: 2vw;
+  letter-spacing: 3px;
+  background: var(--bodyBg);
+  border-radius: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+/* reusable button  */
+button {
+  padding: 5rem 1rem;
+  font-size: 2vw;
+  letter-spacing: 3px;
+  background: var(--bodyBg);
+  border-radius: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+body {
+  background: var(--bodyBg);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4vw;
+  width: 100%;
+  background: var(--gray);
+}
+header > a {
+  color: var(--white);
+  font-size: 3vw;
+  letter-spacing: 3px;
+  font-weight: bolder;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* signup form  */
+form.form {
+  background: var(--gray);
+  width: fit-content;
+  padding: 1rem;
+  width: 30%;
+  position: fixed;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  display: none;
+  border: 1px solid var(--hoverWhite);
+}
+
+form.form span.form-title {
+  color: var(--navy);
+  font-size: 2vw;
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 0.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 4rem;
+  text-align: center;
+}
+
+form.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+form.form label span:nth-child(1) {
+  font-size: 2vw;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+form.form label input {
+  width: 100%;
+  padding: 0.2rem 1rem;
+  font-size: 2vw;
+  border-radius: 0.5rem;
+  background: var(--bodyBg);
+  color: var(--white);
+  outline: none;
+}
+
+form.form label span:nth-child(3) {
+  color: var(--waring);
+  text-align: left;
+  letter-spacing: 1px;
+  display: none;
+}
+
+form.form button {
+  padding: 0.2rem 1rem;
+  background: var(--fadeWhite);
+  color: var(--black);
+}
+
+/* login form errro message color  */
+form.form.login-form label span:nth-child(3) {
+  color: var(--danger);
+}
+
+/* this will help to toggle */
+input#login-form-checked:checked ~ form.login-form {
+  display: flex;
+}
+
+input#signup-form-checked:checked ~ form.signup-form {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  span.button {
+    font-size: 4vw;
+  }
+  button {
+    font-size: 6vw;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+  header > a {
+    font-size: 6vw;
+  }
+  form.form {
+    width: 90%;
+  }
+  form.form span.form-title {
+    font-size: 6vw;
+  }
+
+  form.form label span:nth-child(1) {
+    font-size: 6vw;
+  }
+  form.form label input {
+    font-size: 4vw;
+    padding: 1rem;
+  }
+
+  form.form button {
+    padding: 1rem;
+  }
+}

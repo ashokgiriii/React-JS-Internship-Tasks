@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorization</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="">Authorization</a>
+
+      <nav>
+        <label for="signup-form-checked">
+          <span class="button">Signup</span>
+        </label>
+
+        <label for="login-form-checked">
+          <span class="button">Login</span>
+        </label>
+      </nav>
+    </header>
+
+    <main>
+      <input type="radio" name="form-toggle" id="login-form-checked"  hidden />
+      <input type="radio" name="form-toggle" id="signup-form-checked"  hidden />
+
+      <label for="login-form-checked"></label>
+      <label for="signup-form-checked"></label>
+
+      <!-- signup form  -->
+
+      <form action="" class="signup-form form">
+        <span class="form-title">signup</span>
+        <label for="username">
+          <span>Username</span>
+          <input
+            type="text"
+            placeholder="username"
+            class="username"
+            id="username"
+            required
+          />
+          <span class="error-message"> something went wrong </span>
+        </label>
+
+        <label for="email">
+          <span>Email </span>
+          <input
+            type="email"
+            placeholder="email"
+            class="email"
+            id="email"
+            required
+          />
+
+          <span class="error-message"> something went wrong </span>
+        </label>
+
+        <button>Submit</button>
+      </form>
+
+      <!-- login form  -->
+      <form action="" class="login-form form">
+        <span class="form-title">LOGIN</span>
+        <label for="username">
+          <span>Username</span>
+          <input
+            type="text"
+            placeholder="username"
+            class="username"
+            id="username"
+            required
+          />
+          <span class="error-message"> something went wrong </span>
+        </label>
+
+        <label for="email">
+          <span>Email </span>
+          <input
+            type="email"
+            placeholder="email"
+            class="email"
+            id="email"
+            required
+          />
+
+          <span class="error-message"> something went wrong </span>
+        </label>
+
+        <button>Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
