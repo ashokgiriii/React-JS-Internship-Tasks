@@ -10,16 +10,35 @@
 
   <body>
     <main>
+      <!-- model Box -->
+      <div class="delete-pop-up">
+        <span>Delete User </span>
+        <span>Are you sure you want to delete this User ?</span>
+        <div>
+          <button class="want-to-cancel">Cancel</button>
+          <button class="want-to-delete">Delete</button>
+        </div>
+      </div>
+
       <form action="" class="form">
         <h1><span>fill</span> The form</h1>
         <div>
           <label for="name">
+            <span class="input-title">Full Name</span>
             <input type="text" placeholder="Full Name" class="name" />
+            <span class="error-message name-error-message"
+              >Something went wrong</span
+            >
           </label>
           <label for="phoneNumber">
+            <span class="input-title">Phone Number</span>
             <input type="number" placeholder="Phone Number" class="number" />
+            <span class="error-message number-error-message"
+              >something went wrong</span
+            >
           </label>
           <label for="email">
+            <span class="input-title">Email</span>
             <input
               type="email"
               name="email"
@@ -27,9 +46,27 @@
               placeholder="Email"
               class="email"
             />
+            <span class="error-message email-error-message">
+              Something went wrong
+            </span>
           </label>
+
+          <label for="number">
+            <span class="input-title">Age</span>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              placeholder="Age"
+              class="age"
+            />
+            <span class="error-message age-error-message">
+              Something went wrong
+            </span>
+          </label>
+
           <label for="submit">
-            <button>Submit</button>
+            <button class="form-submit-button">Submit</button>
           </label>
         </div>
       </form>
@@ -46,21 +83,11 @@
           <th>Name</th>
           <th>Email</th>
           <th>Phone Number</th>
+          <th>Age</th>
           <th>Actions</th>
         </tr>
-        
 
-        <tbody class="user-info">
-          <!-- <tr>
-            <td th-name="Name : ">Ashok Giri</td>
-            <td th-name="Email : ">ashokgiri@gmail.com</td>
-            <td th-name="Phone Number : ">9876765453</td>
-            <td>
-              <button>Edit</button>
-              <button>Delete</button>
-            </td>
-          </tr> -->
-        </tbody>
+        <tbody class="user-info"></tbody>
       </table>
     </main>
 

@@ -27,6 +27,69 @@ body {
   background-color: var(--bodyColor);
 }
 
+/* model box for delete  */
+.delete-pop-up {
+  /* background: var(--pinkFaded); */
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 1rem;
+  /* border-radius: 1rem; */
+  padding: 1rem;
+  width: 700px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition: .3s ease-in-out;
+
+  /* initailly hide gareko */
+  transform: translate(-50%, -50%);
+  display: none;
+  border-radius: 0.2rem;
+
+  /* morphism */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 20px 10px rgba(255, 255, 255, 1);
+}
+
+.delete-pop-up span {
+  text-align: center;
+}
+.delete-pop-up span:nth-child(1) {
+  font-size: 4vw;
+}
+.delete-pop-up span:nth-child(2) {
+  font-size: 1.2vw;
+}
+
+.delete-pop-up div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.delete-pop-up:has(div) button {
+  width: 50%;
+  padding: 0.5rem;
+  height: 50px;
+  width: 1fr;
+  cursor: pointer;
+}
+.delete-pop-up:has(div) button:nth-child(1) {
+  background: var(--gray);
+  color: var(--white);
+}
+
+.delete-pop-up:has(div) button:nth-child(2) {
+  background: var(--danger);
+  color: var(--white);
+}
+
 main {
   width: 100%;
   height: 100%;
@@ -71,6 +134,9 @@ form div {
 }
 form div label {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   width: calc(100% / 2 - (0.5rem));
 }
 form div label input {
@@ -82,6 +148,21 @@ form div label input {
   border-radius: 0.2rem;
   overflow: hidden;
 }
+
+/* eroor message  */
+form div label span.error-message {
+  color: var(--danger);
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+form div label span.input-title {
+  color: var(--black);
+  font-size: 2vw;
+  align-items: center;
+}
+
 form div label button {
   width: 100%;
   padding: 1rem;
@@ -120,7 +201,7 @@ main table tr td {
   padding: 1rem;
   border: 1px solid var(--black);
   text-align: left;
-  width: calc(100% / 4);
+  /* width: calc(100% / 4); */
 }
 
 main table tr {
@@ -129,6 +210,7 @@ main table tr {
 main table tr td {
   transition: 0.2s;
   transform-origin: left;
+  width: 1fr 1fr 1fr 2fr;
 }
 
 main table tr td:hover {
@@ -169,6 +251,23 @@ main table tr:has(th) {
 }
 
 @media (max-width: 600px) {
+  /* model box for delete  */
+  .delete-pop-up {
+    padding: 0.5rem;
+    width: 70%;
+  }
+
+  .delete-pop-up span:nth-child(1) {
+    font-size: 8vw;
+  }
+  .delete-pop-up span:nth-child(2) {
+    font-size: 3vw;
+  }
+
+  .delete-pop-up:has(div) button {
+    height: 40px;
+  }
+
   /* form div block css */
   form {
     width: 100%;
@@ -182,6 +281,11 @@ main table tr:has(th) {
   }
   form div label {
     width: 100%;
+  }
+
+  form div label span.input-title {
+    font-size: 2vh;
+    align-items: center;
   }
 
   /* user table block css */

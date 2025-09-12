@@ -1,0 +1,4 @@
+ nameRegex = /^[A-Za-z]+([ '-][A-Za-z]+)*$/;
+ phoneRegex = /^\d{10}$/;
+ emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+ ageRegex = /^(?:1[01][0-9]|120|[1-9][0-9]?)$/;
