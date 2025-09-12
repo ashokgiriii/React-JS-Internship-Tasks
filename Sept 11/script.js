@@ -17,11 +17,11 @@ function showTable() {
   formData.forEach((e, index) => {
     userInfo.innerHTML += `
       <tr>
-        <td>${e.name}</td>
-        <td>${e.email}</td>
-        <td>${e.number}</td>
-        <td>${e.age}</td>
-        <td>
+        <td th-title="Name : ">${e.name}</td>
+        <td th-title="Email : ">${e.email}</td>
+        <td th-title="Number : ">${e.number}</td>
+        <td th-title="Age : ">${e.age}</td>
+        <td th-title="">
           <button onclick="editUser(${index})">Edit</button>
           <button onclick="deleteUser(${index})">Delete</button>
         </td>
@@ -34,7 +34,7 @@ function showTable() {
 showTable();
 
 // Submiting the form
-formSubmitButton.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // all the inpUT value
@@ -43,7 +43,7 @@ formSubmitButton.addEventListener("click", (e) => {
   const number = document.querySelector(".number").value.trim();
   const age = document.querySelector(".age").value.trim();
 
-  // reges
+  // regex
   const nameRegex = /^[A-Za-z]+([ '-][A-Za-z]+)*$/;
   const phoneRegex = /^\d{10}$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -107,24 +107,21 @@ formSubmitButton.addEventListener("click", (e) => {
   form.reset();
 });
 
-
-
-// indexing 0 rakheko iniatially 
+// indexing 0 rakheko iniatially
 let whichToDelete = null;
 
 // delting the userrr
 function deleteUser(index) {
-  whichToDelete = index;   //yele kun ho target garxa
+  whichToDelete = index; //yele kun ho target garxa
   deletePopUp.style.display = "flex";
 }
 
 document.querySelector(".want-to-delete").addEventListener("click", () => {
-  formData.splice(whichToDelete, 1); 
+  formData.splice(whichToDelete, 1);
 
-  localStorage.setItem("data", JSON.stringify(formData)); 
+  localStorage.setItem("data", JSON.stringify(formData));
 
-
-  showTable(); 
+  showTable();
 
   deletePopUp.style.display = "none";
 });
@@ -144,7 +141,6 @@ function editUser(index) {
   //   aba jun edit vako xa tyo chai delete garni ani naya ta form submit vayesi afai aauxa
   formData.splice(index, 1);
   localStorage.setItem("data", JSON.stringify(formData));
-
-  //   last ma table lai feri dekhauna parxa
-  showTable();
 }
+
+// localStorage.clear();

@@ -29,61 +29,9 @@ svg {
   width: 1.5rem;
   color: var(--white);
 }
+
 header {
-  width: 100vw;
-  height: 8vh;
-}
-header .container {
   display: flex;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--secondary);
-  padding: 0 1.5rem;
-}
-header .container > a {
-  font-size: 1.5rem;
-  color: var(--white);
-  letter-spacing: 1px;
-}
-header .container nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: fit-content;
-  background: var(--secondary);
-
-  /* hiding initailly */
-
-  transform: translateY(-100%);
-  transition: 0.3s;
-}
-header .container nav svg.close-menu {
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
-  height: 2rem;
-  width: 2rem;
-}
-header .container nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 0;
-  width: 100%;
-  gap: 1.5rem;
-  list-style: none;
-}
-header .container nav ul li a {
-  color: var(--white);
-  font-size: 1.5rem;
-}
-input.show-menu {
-  display: none;
-}
-input.show-menu:checked ~ nav {
-  transform: translateY(0%);
 }
 
 main {
