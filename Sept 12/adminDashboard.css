@@ -1,0 +1,21 @@
+:root {
+  --bodyBg: #222831;
+  --gray: #393e46;
+  --navy: #00adb5;
+  --fadeWhite: #eeeeee;
+  --danger: red;
+  --waring: yellow;
+  --grey: gray;
+  --hoverWhite: #5c5b5b92;
+  --black: black;
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

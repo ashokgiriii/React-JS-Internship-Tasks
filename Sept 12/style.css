@@ -18,6 +18,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.251);
 }
 
 /* optional button shape hai yo  */
@@ -25,27 +26,40 @@ span.button {
   padding: 0.5rem 1rem;
   font-size: 2vw;
   letter-spacing: 3px;
-  background: var(--bodyBg);
   border-radius: 0.5rem;
-  color: var(--white);
+
+  color: var(--black);
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid var(--black);
+  transition: 0.5s;
+  text-shadow: 1px 1px 2px;
+
+  &:hover {
+    background: #000;
+    color: var(--white);
+  }
 }
 
 /* reusable button  */
 button {
-  padding: 5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 2vw;
   letter-spacing: 3px;
-  background: var(--bodyBg);
   border-radius: 0.5rem;
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
+  text-shadow: 1px 1px 2px;
+
+  transition: 0.5s;
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid var(--black);
+  &:hover {
+    background: var(--black);
+    color: var(--white);
+  }
 }
 
 body {
-  background: var(--bodyBg);
   height: 100%;
   width: 100%;
   position: relative;
@@ -59,15 +73,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4vw;
+  padding: 1rem 4vw;
   width: 100%;
-  background: var(--gray);
+  height: 20vh;
 }
 header > a {
-  color: var(--white);
   font-size: 3vw;
   letter-spacing: 3px;
   font-weight: bolder;
+  color: var(--black);
+  text-shadow: 1px 1px 2px;
 }
 header nav {
   display: flex;
@@ -75,37 +90,34 @@ header nav {
   gap: 1rem;
 }
 
-/* signup form  */
 form.form {
-  background: var(--gray);
-  width: fit-content;
+  width: 25%;
   padding: 1rem;
-  width: 30%;
   position: fixed;
+  top: 20vh;
+  right: -100%;          /* hidden by default */
+  transition: 0.3s ease;
+  border-left: 1px solid black;
   border-radius: 0.5rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  flex-wrap: wrap;
   flex-direction: column;
-
-  display: none;
-  border: 1px solid var(--hoverWhite);
+  gap: 1rem;
+  background: var(--white);
+  z-index: 1;
 }
 
-form.form span.form-title {
-  color: var(--navy);
-  font-size: 2vw;
-  border-bottom: 1px solid var(--white);
-  padding-bottom: 0.5rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border-radius: 4rem;
-  text-align: center;
+/* Toggle rules */
+input#login-form-checked:checked ~ form.login-form {
+  right: 0%;
 }
+
+input#signup-form-checked:checked ~ form.signup-form {
+  right: 0%;
+}
+
+
+
+
 
 form.form label {
   display: flex;
@@ -115,7 +127,7 @@ form.form label {
 form.form label span:nth-child(1) {
   font-size: 2vw;
   letter-spacing: 2px;
-  color: var(--white);
+  color: var(--b) lack;
 }
 
 form.form label input {
@@ -123,22 +135,16 @@ form.form label input {
   padding: 0.2rem 1rem;
   font-size: 2vw;
   border-radius: 0.5rem;
-  background: var(--bodyBg);
   color: var(--white);
+  color: var(--black);
   outline: none;
 }
 
 form.form label span:nth-child(3) {
-  color: var(--waring);
+  color: var(--danger);
   text-align: left;
   letter-spacing: 1px;
   display: none;
-}
-
-form.form button {
-  padding: 0.2rem 1rem;
-  background: var(--fadeWhite);
-  color: var(--black);
 }
 
 /* login form errro message color  */
@@ -146,18 +152,41 @@ form.form.login-form label span:nth-child(3) {
   color: var(--danger);
 }
 
-/* this will help to toggle */
-input#login-form-checked:checked ~ form.login-form {
-  display: flex;
-}
 
-input#signup-form-checked:checked ~ form.signup-form {
+
+/* section hero page css */
+section.hero {
+  padding: 4vw;
+  height: 80vh;
+}
+section.hero h1 {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section.hero h1 div {
+  display: flex;
+  gap: 1rem;
+}
+section.hero h1 div span:nth-child(1) {
+  text-transform: uppercase;
+}
+section.hero h1 span {
+  font-size: 13vw;
+  text-shadow: 2px 2px 2px var(--gray);
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: white;
+    /* background: red; */
+    height: fit-content;
+    width: fit-content;
+  }
 }
 
 @media (max-width: 600px) {
   span.button {
-    font-size: 4vw;
+    font-size: 5vw;
   }
   button {
     font-size: 6vw;
@@ -165,14 +194,18 @@ input#signup-form-checked:checked ~ form.signup-form {
 
   header {
     flex-direction: column;
-    padding: 2rem 0;
-    gap: 1.5rem;
+    justify-content: center;
+
+    gap: 2rem;
+    height: 20vh;
+    padding: 1rem 0;
   }
   header > a {
-    font-size: 6vw;
+    font-size: 8vw;
   }
   form.form {
-    width: 90%;
+    width: 100%;
+    top: 20vh;
   }
   form.form span.form-title {
     font-size: 6vw;
@@ -188,5 +221,17 @@ input#signup-form-checked:checked ~ form.signup-form {
 
   form.form button {
     padding: 1rem;
+  }
+
+  /*  */
+  section.hero {
+    padding: 8vw 1rem;
+  }
+
+  section.hero h1 div {
+    flex-wrap: wrap;
+  }
+  section.hero h1 span {
+    font-size: 20vw;
   }
 }

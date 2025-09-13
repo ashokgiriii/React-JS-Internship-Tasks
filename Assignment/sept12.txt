@@ -1,0 +1,6 @@
+-make a admin Dashboard , where the form will take the user info like {name,email,phone number,age,skills}
+-should be validate
+-duplicated email, number not allowed 
+-- searching function will be There 
+--crud option will be There
+

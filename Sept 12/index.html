@@ -23,8 +23,8 @@
     </header>
 
     <main>
-      <input type="radio" name="form-toggle" id="login-form-checked"  hidden />
-      <input type="radio" name="form-toggle" id="signup-form-checked"  hidden />
+      <input type="radio" name="form-toggle" id="login-form-checked" hidden />
+      <input type="radio" name="form-toggle" id="signup-form-checked" hidden />
 
       <label for="login-form-checked"></label>
       <label for="signup-form-checked"></label>
@@ -32,7 +32,6 @@
       <!-- signup form  -->
 
       <form action="" class="signup-form form">
-        <span class="form-title">signup</span>
         <label for="username">
           <span>Username</span>
           <input
@@ -42,7 +41,7 @@
             id="username"
             required
           />
-          <span class="error-message"> something went wrong </span>
+          <span class="error-message signup"> something went wrong </span>
         </label>
 
         <label for="email">
@@ -55,15 +54,14 @@
             required
           />
 
-          <span class="error-message"> something went wrong </span>
+          <span class="error-message duplicate-error"> something went wrong </span>
         </label>
 
-        <button>Submit</button>
+        <button>SIGNUP</button>
       </form>
 
       <!-- login form  -->
       <form action="" class="login-form form">
-        <span class="form-title">LOGIN</span>
         <label for="username">
           <span>Username</span>
           <input
@@ -89,8 +87,33 @@
           <span class="error-message"> something went wrong </span>
         </label>
 
-        <button>Submit</button>
+        <button>LOGIN</button>
       </form>
+
+      <section class="hero">
+        <h1>
+          <div>
+            <span>a</span>
+            <span>d</span>
+            <span>m</span>
+            <span>i</span>
+            <span>n</span>
+          </div>
+          <div>
+            <span>d</span>
+            <span>a</span>
+            <span>s</span>
+            <span>h</span>
+            <span>b</span>
+            <span>o</span>
+            <span>a</span>
+            <span>r</span>
+            <span>d</span>
+          </div>
+        </h1>
+      </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
