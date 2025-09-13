@@ -8,9 +8,17 @@
   </head>
 
   <body>
+    <!-- model pop up  -->
+    <div class="modelpop">
+      <div>
+        <span>User has been Successfully Created . 🎊</span>
+        <img src="./Public/Icons/close-line.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- navbar -->
     <header>
       <a href="">Authorization</a>
-
       <nav>
         <label for="signup-form-checked">
           <span class="button">Signup</span>
@@ -54,21 +62,24 @@
             required
           />
 
-          <span class="error-message duplicate-error"> something went wrong </span>
+          <span class="error-message duplicate-error">
+            something went wrong
+          </span>
         </label>
 
         <button>SIGNUP</button>
+        <img src="./Public/Icons/close-line.svg" alt="" class="close-form" />
       </form>
 
       <!-- login form  -->
-      <form action="" class="login-form form">
+      <form action="./adminDashboard.html" class="login-form form">
         <label for="username">
           <span>Username</span>
           <input
             type="text"
             placeholder="username"
             class="username"
-            id="username"
+            id="loginUsername"
             required
           />
           <span class="error-message"> something went wrong </span>
@@ -80,14 +91,15 @@
             type="email"
             placeholder="email"
             class="email"
-            id="email"
+            id="loginEmail"
             required
           />
 
-          <span class="error-message"> something went wrong </span>
+          <span class="error-message wrong-username-email"> something went wrong </span>
         </label>
 
         <button>LOGIN</button>
+        <img src="./Public/Icons/close-line.svg" alt="" class="close-form" />
       </form>
 
       <section class="hero">
@@ -114,6 +126,13 @@
       </section>
     </main>
 
+    <!-- ui js -->
     <script src="./script.js"></script>
+
+    <!-- signup js  -->
+    <script src="./signup.js"></script>
+
+    <!-- login js  -->
+    <script src="./login.js"></script>
   </body>
 </html>
