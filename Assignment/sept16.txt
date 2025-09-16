@@ -1,0 +1,6 @@
+--make a function and call setCount to 3 times 
+-- revise today what you learned
+-- using class component , make a counter app 
+-- if not js not done  , do that 
+-- use animation on adding , deleting using js ,css 
+-- how class components works ? learn that
