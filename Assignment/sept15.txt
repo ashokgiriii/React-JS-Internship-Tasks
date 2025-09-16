@@ -1,0 +1,2 @@
+-create a bsic react Hello world Program 
+-read virtual dom and other bsic
