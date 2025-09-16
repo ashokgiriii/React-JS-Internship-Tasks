@@ -4,21 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- admin css -->
+    <link rel="stylesheet" href="./admin.css" />
   </head>
   <body>
-    <h1>Admin Dasboard</h1>
-    <button>Logout</button>
+    <!-- model pop up  -->
+    <div class="modelpop">
+      <div>
+        <span>User has been Successfully Created . 🎊</span>
+        <img src="./Public/Icons/close-line.svg" alt="" />
+      </div>
+    </div>
 
-    <script>
-      const youAreLoggedIn = localStorage.getItem("youAreLoggedIn");
-      if (youAreLoggedIn !== "true") {
-        window.location.href = "./adminDashboard.html";
-      }
+    <main>
+      <h1>Welcome to Admin Dashboard</h1>
+      <form action="" class="admin-form">
+        <label>
+          <span>Full Name</span>
+          <input type="text" placeholder="Full Name" class="adminFullName" />
+          <span class="error-message name-error"> Error Occured </span>
+        </label>
 
-      document.querySelector("button").addEventListener("click", () => {
-        localStorage.removeItem("youAreLoggedIn");
-        window.location.href = "./index.html";
-      });
-    </script>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="Email" class="adminEmail" />
+          <span class="error-message email-error"> Error Occured </span>
+        </label>
+
+        <label>
+          <span>Phone Number</span>
+          <input type="tel" placeholder="Phone" class="adminPhone" />
+          <span class="error-message phone-error"> Error Occured </span>
+        </label>
+
+        <label>
+          <span>City</span>
+          <input type="text" placeholder="City" class="adminCity" />
+          <span class="error-message city-error"> Error Occured </span>
+        </label>
+
+        <select name="adminSkills" id="skills" class="adminSkills">
+          <option value="Web Developers">Web Developer</option>
+          <option value="Software Developer">Software Developer</option>
+          <option value="UI/UX Designer">UI/UX Designer</option>
+          <option value="DevOps">DevOps</option>
+        </select>
+
+        <button>Submit</button>
+      </form>
+      <button class="add-user-btn">
+        <a href="./userData.html">See User Data</a>
+      </button>
+    </main>
+
+    <script src="./admin.js"></script>
   </body>
 </html>

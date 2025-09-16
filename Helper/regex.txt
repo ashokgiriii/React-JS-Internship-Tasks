@@ -3,3 +3,8 @@
  phoneRegex = /^\d{10}$/;
  emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
  ageRegex = /^(?:1[01][0-9]|120|[1-9][0-9]?)$/;
+
+fullNameRegex = /^(?=.{2,100}$)[A-Za-zÀ-ÖØ-öø-ÿ'’-]+(?: [A-Za-zÀ-ÖØ-öø-ÿ'’-]+)+$/;
+cityRegex =/^[A-Za-zÀ-ÖØ-öø-ÿ' .-]{2,50}$/;
+phoneNUmber=/^(?=(?:.*\d){7,15}$)[0-9()+\-.\s]{7,25}$/
+10DigitPhoneNUmber=/^\d{10}$/

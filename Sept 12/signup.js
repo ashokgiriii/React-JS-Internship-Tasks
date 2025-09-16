@@ -14,7 +14,6 @@ document.querySelector("form.signup-form").addEventListener("submit", (e) => {
   if (!usernameRegex.test(username)) {
     document.querySelector(".error-message.signup").textContent =
       "Invalid Username";
-    document.querySelector(".error-message.signup").style.display = "flex";
     return;
   }
 
@@ -64,14 +63,15 @@ document.querySelector("form.signup-form").addEventListener("submit", (e) => {
   document.querySelector(".error-message.duplicate-error").textContent = "";
 
   // showing the pop up message with model box
-  document.querySelector("div.modelpop").style.right = "4vw";
+  document.querySelector("div.modelpop").style.transform = "translate(0%)";
   setTimeout(() => {
-    document.querySelector("div.modelpop").style.right = "-100%";
+    document.querySelector("div.modelpop").style.transform = "translate(100%)";
   }, 3000);
 
   document
     .querySelector("div.modelpop div img")
     .addEventListener("click", () => {
-      document.querySelector("div.modelpop").style.right = "-100%";
+      document.querySelector("div.modelpop").style.transform =
+        "translate(100%)";
     });
 });

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Users</title>
+  <!-- <link rel="stylesheet" href="./style.css" /> -->
+  <link rel="stylesheet" href="./users.css" />
+</head>
+
+<body>
+  <main>
+    <!-- delete pop up is here -->
+    <div class="delete-pop-up">
+      <span>Delete User </span>
+      <span>Are you sure you want to delete this User ?</span>
+      <div>
+        <button class="want-to-cancel">Cancel</button>
+        <button class="want-to-delete">Delete</button>
+      </div>
+    </div>
+
+
+
+    <!-- update user is here -->
+    <h1>Users Data</h1>
+<div class="edit-pop-up" >
+  <h2>Update User</h2>
+    <form action="" class="admin-form ">
+      <label>
+        <span>Full Name</span>
+        <input type="text" placeholder="Full Name" class="adminFullName" />
+        <span class="error-message name-error">  </span>
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" placeholder="Email" class="adminEmail" />
+        <span class="error-message email-error">  </span>
+      </label>
+
+      <label>
+        <span>Phone Number</span>
+        <input type="tel" placeholder="Phone" class="adminPhone" />
+        <span class="error-message phone-error">  </span>
+      </label>
+
+      <label>
+        <span>City</span>
+        <input type="text" placeholder="City" class="adminCity" />
+        <span class="error-message city-error">  </span>
+      </label>
+      
+
+      <select name="adminSkills" id="skills" class="adminSkills">
+        <option value="Web Developers">Web Developer</option>
+        <option value="Software Developer">Software Developer</option>
+        <option value="UI/UX Designer">UI/UX Designer</option>
+        <option value="DevOps">DevOps</option>
+      </select>
+      <button type="button" class="update">Update</button>
+      <button type="button" class="edit-cancel">Cancel</button>
+    </form>
+  </div>
+
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Skills</th>
+        <th>K Garni ?</th>
+      </tr>
+
+      <!-- the data will be fetched here -->
+      <tbody class="users-row">
+        <!-- <tr>
+            <td>ashok</td>
+            <td>ashok</td>
+            <td>ashok</td>
+            <td>ashok</td>
+            <td>ashok</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td> -->
+        </tr>
+      </tbody>
+    </table>
+    <button class="add-user-btn">
+      <a href="./adminDashboard.html">Add User</a>
+    </button>
+
+
+
+  </main>
+
+  
+
+  <script src="./users.js"></script>
+</body>
+
+</html>

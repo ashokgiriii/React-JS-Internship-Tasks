@@ -1,13 +1,12 @@
 const localStorageArrayData = localStorage.getItem("formData");
-const parsedlocalStorageArrayData = JSON.parse(localStorageArrayData);
-
-console.log(parsedlocalStorageArrayData);
+const parsedlocalStorageArrayData = JSON.parse(localStorageArrayData) || [];
 
 document.querySelector("form.login-form").addEventListener("submit", (e) => {
   e.preventDefault();
 
   let username = document.querySelector("#loginUsername").value.trim();
   let email = document.querySelector("#loginEmail").value.trim();
+  console.log("hello");
 
   const realUser = parsedlocalStorageArrayData.some((eachUser) => {
     return username === eachUser.username && email === eachUser.email;

@@ -27,23 +27,29 @@ img {
   width: 100%;
   object-fit: content;
 }
+
 div.modelpop {
-  height: 20vh;
-  position: fixed;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
   display: flex;
-  align-items: center;
-  right: -100%;
-  transition: 0.5s ease-in-out;
+  justify-content: flex-end;
+  transform: translate(100%);
+  transition: 0.3s ease-in-out;
+  position: fixed;
 }
 div.modelpop > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 2rem;
   align-items: center;
-  padding: 1rem;
-  gap: 1rem;
   background: var(--success);
-  width: 100%;
-  border-radius: 0.1rem;
+  height: 100%;
+  padding: 1rem 2rem;
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+div.modelpop > div span {
   color: var(--white);
 }
 div.modelpop img {
@@ -190,7 +196,7 @@ form.form img.close-form {
   width: fit-content;
   margin: 0 auto;
   margin-top: 1rem;
-  transition: .5s;
+  transition: 0.5s;
   &:hover {
     rotate: 30deg;
   }
