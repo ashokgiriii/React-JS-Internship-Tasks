@@ -30,7 +30,8 @@ let whichRowToDelete = null;
 
 function deleteUser(index) {
   whichRowToDelete = index;
-  deletePopUp.style.display = "flex";
+  deletePopUp.classList.add("active");
+  editPopUp.classList.remove("active");
 }
 
 document.querySelector(".want-to-delete").addEventListener("click", () => {
@@ -39,21 +40,28 @@ document.querySelector(".want-to-delete").addEventListener("click", () => {
 
     localStorage.setItem("localstorageUsers", JSON.stringify(localData));
 
-    showingTheTable();
+    document.querySelector("div.modelpop").classList.add("active", "delete");
 
+    setTimeout(() => {
+      document
+        .querySelector("div.modelpop")
+        .classList.remove("active", "delete");
+    }, 2000);
+
+    showingTheTable();
     whichRowToDelete = null;
   }
 
-  deletePopUp.style.display = "none";
+  deletePopUp.classList.remove("active");
 });
 
 document.querySelector(".want-to-cancel").addEventListener("click", () => {
-  deletePopUp.style.display = "none";
+  deletePopUp.classList.remove("active");
 });
 
 // editing the user
 
-let editPopUp = document.querySelector(".edit-pop-up");
+let editPopUp = document.querySelector("div.edit-pop-up");
 console.log(editPopUp);
 
 let whichRowToEdit = null;
@@ -69,7 +77,8 @@ function editUser(index) {
   document.querySelector(".adminCity").value = user.adminCity;
   document.querySelector(".adminSkills").value = user.adminSkills;
 
-  editPopUp.style.display = "flex";
+  editPopUp.classList.add("active");
+  deletePopUp.classList.remove("active");
 }
 
 document.querySelector(".update").addEventListener("click", () => {
@@ -130,13 +139,16 @@ document.querySelector(".update").addEventListener("click", () => {
 
     localStorage.setItem("localstorageUsers", JSON.stringify(localData));
 
-    showingTheTable();
-
     whichRowToEdit = null;
-    editPopUp.style.display = "none";
+    editPopUp.classList.remove("active");
+    document.querySelector("div.modelpop").classList.add("active");
+    setInterval(() => {
+      document.querySelector("div.modelpop").classList.remove("active");
+    }, 2000);
+    showingTheTable();
   }
 });
 
 document.querySelector(".edit-cancel").addEventListener("click", () => {
-  editPopUp.style.display = "none";
+  editPopUp.classList.remove("active");
 });

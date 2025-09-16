@@ -27,18 +27,7 @@ img {
   width: 100%;
   object-fit: content;
 }
-
 div.modelpop {
-  gap: 1rem;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  transform: translate(100%);
-  transition: 0.3s ease-in-out;
-  position: fixed;
-}
-div.modelpop > div {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
@@ -48,8 +37,22 @@ div.modelpop > div {
   padding: 1rem 2rem;
   width: fit-content;
   border-radius: 0.5rem;
+  position: fixed;
+  right: 4vw;
+  height: fit-content;
+  transform: translate(calc(100% + 4vw));
+  transition: 0.3s ease-in-out;
 }
-div.modelpop > div span {
+
+div.modelpop.active {
+  transform: translate(0);
+}
+
+div.modelpop.active.delete {
+  background: var(--danger);
+}
+
+div.modelpop > span {
   color: var(--white);
 }
 div.modelpop img {
@@ -242,6 +245,20 @@ section.hero h1 div span {
     width: fit-content;
   }
 }
+.see-user-data-button {
+  padding: 1rem 2rem;
+  color: var(--white);
+  background: var(--gray);
+  border: 1px solid var(--black);
+  transition: 0.3s ease-in-out;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  &:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+}
 
 @media (max-width: 600px) {
   span.button {
@@ -263,7 +280,6 @@ section.hero h1 div span {
 
     gap: 2rem;
     height: 20vh !important;
-    padding: 1rem 0;
   }
   header > a {
     font-size: 12vw;

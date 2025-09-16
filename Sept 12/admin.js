@@ -113,16 +113,15 @@ document.querySelector("form.admin-form").addEventListener("submit", (e) => {
   document.querySelector("form.admin-form").reset();
 
   // showing the pop up message with model box
-  document.querySelector("div.modelpop").style.transform = "translate(0%)";
+  document.querySelector("div.modelpop").classList.add("active");
   setTimeout(() => {
-    document.querySelector("div.modelpop").style.transform = "translate(100%)";
-  }, 3000);
+    document.querySelector("div.modelpop").classList.remove("active");
+  }, 2000);
 
   document
     .querySelector("div.modelpop div img")
     .addEventListener("click", () => {
-      document.querySelector("div.modelpop").style.transform =
-        "translate(100%)";
+      document.querySelector("div.modelpop").classList.remove = "active";
     });
 });
 
