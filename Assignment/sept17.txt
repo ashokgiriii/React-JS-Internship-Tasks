@@ -1,0 +1,29 @@
+"case study "
+-- use 8 multiple in pading , margin like that 
+-- use ternary most of the case
+-- use arrow function on compnennt 
+-- <></> <Fragment></Fragment>. diffrence 
+-- make re-usable component 
+-- react js file folder best 
+
+
+
+"look this"
+UI ={
+    chakra ui,
+    material ui 
+}
+
+
+"Task for today "
+--- make a image slider using js , css , html only {
+    - use button for for next & previous image 
+    - should be responive 
+    - shoul dbe automatic slide image on 1 sec 
+    - should be infinite time 
+}
+
+
+
+
+
