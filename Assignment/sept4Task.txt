@@ -3,19 +3,16 @@
 ## CSS Exercises
 
 1. Flexbox
-
    * Practice using `display: flex`.
    * Align items horizontally and vertically using `justify-content` and `align-items`.
    * Experiment with `flex-direction`, `flex-wrap`, and `flex-grow`.
 
 2. Grid
-
    * Practice using `display: grid`.
    * Create different layouts with `grid-template-columns` and `grid-template-rows`.
    * Use `gap`, `grid-column`, and `grid-row` to arrange items.
 
 3. Make Changes in Different Screen Sizes
-
    * Use media queries (`@media`) to make your layout responsive.
    * Change font sizes, element positions, and colors based on screen width.
    * Test for mobile, tablet, and desktop screens.
