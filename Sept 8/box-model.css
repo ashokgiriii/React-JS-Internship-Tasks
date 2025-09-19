@@ -35,11 +35,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
 /*  box will APear when clicked  */
 #toggle:checked + .box-model {
   display: block;
 }
-
-
-
