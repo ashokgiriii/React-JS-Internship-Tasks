@@ -9,6 +9,7 @@
   --third-color: #1b2e35;
   --white: #ffffff;
   --black: #000000;
+  --boxShadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -32,10 +33,59 @@ svg {
 
 header {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  position: relative;
+  justify-content: center;
+}
+header div.nav-title-with-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+header div.nav-title-with-menu a.link {
+  color: var(--black);
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+header div.nav-title-with-menu label.menu-icon svg.menu-icon {
+  color: var(--black);
+  /* height: 3rem; */
+}
+
+nav ul.listItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  list-style: none;
+  box-shadow: var(--boxShadow);
+  padding: 0 1rem 1rem 1rem;
+  background: var(--white);
+
+  transition: 0.5s ease-in-out;
+  transform: translate(-100%);
+  display: none;
+}
+
+input.toggle-menu {
+  display: none;
+}
+input:checked ~ nav ul.listItems {
+  display: flex;
+  transform: translate(0%);
+  transition: 0.5s ease-in-out;
+}
+nav ul.listItems li a.link {
+  color: var(--black);
 }
 
 main {
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   height: calc(100vh - 8vh);
 }
 section {
@@ -43,7 +93,6 @@ section {
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  padding: 1rem 0;
 }
 section .container.left {
   display: flex;
@@ -109,30 +158,6 @@ section.responsive-rule h2 strong {
   svg {
     display: none;
   }
-  header .container {
-    height: 15vh;
-    padding: 0 4rem;
-    background: none;
-  }
-  header .container > a {
-    font-size: 3rem;
-    color: var(--black);
-  }
-  header .container nav {
-    position: initial;
-    width: initial;
-    transform: initial;
-    height: fit-content;
-    background: none;
-  }
-  section .container.left h1 {
-    font-size: 4vw;
-  }
-
-  section .container.left p {
-    line-height: 3rem;
-    text-align: justify;
-  }
   label {
     display: none;
   }
@@ -140,14 +165,41 @@ section.responsive-rule h2 strong {
     display: none;
   }
 
-  header .container nav ul {
+  header {
     flex-direction: row;
-    height: initial;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 0;
+    width: 100%;
+    padding: 2rem 4vw;
+    box-shadow: var(--boxShadow);
   }
-  header .container nav ul li a {
-    color: var(--black);
+  header div.nav-title-with-menu {
+    padding: 0;
+  }
+  nav ul.listItems {
+    display: flex;
+    box-shadow: none;
+    flex-direction: row;
+    padding: 0;
+    transform: initial;
+    gap: 4rem;
+  }
+  nav ul.listItems li a.link {
+    font-size: 1.5rem;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  section .container.left h1 {
+    font-size: 4vw;
+  }
+
+  section .container.left p {
+    line-height: 3rem;
+    text-align: justify;
   }
 
   main {
