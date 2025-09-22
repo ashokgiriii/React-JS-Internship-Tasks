@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.child-component {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+  border-top: 1px solid #000;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+.child-component h1 {
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+.child-component > div {
+  display: flex;
+  gap: 8px;
+}
+
+.child-component > div button,
+.child-component > div input {
+  padding: 8px 16px;
+  outline: none;
+  letter-spacing: 1px;
+}
+.child-component > div button {
+  cursor: pointer;
+}
+
+.child-component > div input {
+  min-width: 200px;
+}
+
+.parent-component {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.parent-component h2 {
+  letter-spacing: 2px;
+  text-align: left;
+}
+.parent-component p.message {
+  letter-spacing: 1px;
+  text-align: left;
+}
