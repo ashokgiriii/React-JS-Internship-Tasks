@@ -1,0 +1,21 @@
+--install "react dev tool" extension
+-- read "controlled and uncontrolled component"
+-- reaad react events
+--  read props passing from  child to parent (state lifting up )
+-- context api /global state management ( redux , recoil , movix)
+-- should be Structured folder while creating projects
+
+
+**** task to be done  ****
+-- using prop types 
+-- state lifting up 
+
+Use PropTypes for reusable component
+State lifting up (pass data from child to parent component)
+Follow atomic file folder structure for your reactjs project
+
+
+Drag functionality for your existing slider image (Javascript)
+
+
+

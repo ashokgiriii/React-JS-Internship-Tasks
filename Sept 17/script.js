@@ -29,85 +29,33 @@ const mobsImageArray = [
   { src: "MC-Tadpole.webp", name: "Tadpole" },
 ];
 
-const container = document.querySelector(".imageContainer");
+// swiper container
+const swiperWrapper = document.querySelector(".swiper-wrapper");
 
-// container.innerHTML = mobsImageArray.map(
-//   (mob) => `
-//   <div class="img-with-info">
-//     <div class="info">
-//       <span class="title">${mob.name}</span>
-//       <p class="title-info">
-//         This is a ${mob.name} from Minecraft.
-//       </p>
-//     </div>
-//     <div class="img">
-//       <img class="image" src="./images/${mob.src}" alt="${mob.name}" />
-//     </div>
-//   </div>
-// `
-// );
-
-let currentIndex = 0;
-let arrayLength = mobsImageArray.length;
-
-function renderMob(index) {
-  container.innerHTML = `
-    <div class="img-with-info">
-      <div class="info">
-        <span class="title">${mobsImageArray[index].name}</span>
-        <p class="title-info">
-          This is a ${mobsImageArray[index].name} from Minecraft.
-        </p>
-      </div>
+// dynamic mob maping
+mobsImageArray.forEach((mob) => {
+  swiperWrapper.innerHTML += `
+    <div class="swiper-slide">
       <div class="img">
-        <img class="image" src="./images/${mobsImageArray[index].src}" alt="${mobsImageArray[index].src}" />
+        <img src="./images/${mob.src}" alt="${mob.name}" />
+      </div>
+      <div class="info">
+        <span>${mob.name}</span>
+        <p>This is ${mob.name} from Minecraft</p>
       </div>
     </div>
   `;
-}
-
-// function to show the image of mob
-renderMob(currentIndex);
-
-// clikcing next button to show the next image
-const nextButton = document.querySelector("button.next");
-// console.log(currentIndex);
-nextButton.addEventListener("click", () => {
-  currentIndex++;
-
-  if (currentIndex >= arrayLength) {
-    currentIndex = 0;
-  }
-
-  // console.log(currentIndex);
-
-  renderMob(currentIndex);
 });
 
-// clikcing next button to show the next image
-const prevButton = document.querySelector("button.prev");
-// console.log(currentIndex);
-prevButton.addEventListener("click", () => {
-  currentIndex--;
+const swiper = new Swiper(".swiper", {
+  loop: true,
 
-  if (currentIndex <= 0) {
-    // this will make teh last elem of array to current index
-    currentIndex = arrayLength - 1;
-  }
-
-  // console.log(currentIndex);
-
-  renderMob(currentIndex);
+  autoplay: {
+    delay: 2000,
+    pauseOnMouseEnter: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
-
-setInterval(() => {
-  currentIndex++;
-
-  if (currentIndex >= arrayLength) {
-    currentIndex = 0;
-  }
-
-  // console.log(currentIndex);
-
-  renderMob(currentIndex);
-}, 2000);
