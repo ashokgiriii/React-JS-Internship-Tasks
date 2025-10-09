@@ -1,4 +1,3 @@
-// src/components/Student.jsx
 import { Link } from "react-router-dom";
 
 const students = [
