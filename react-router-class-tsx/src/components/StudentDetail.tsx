@@ -52,7 +52,7 @@ const StudentDetail = () => {
   }
 
   return (
-    <div className="bg-gray-100 p-6 rounded   mt-10">
+    <div className="bg-gray-100 p-6 rounded mt-10 w-[30%] mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-center">Student Details</h2>
       <div className="bg-white p-4 rounded shadow space-y-2">
         <p>
@@ -69,7 +69,7 @@ const StudentDetail = () => {
         </p>
       </div>
       <button
-        className="mt-6 w-full bg-gray-800 text-white py-2 rounded"
+        className="mt-6 w-full cursor-pointer bg-gray-800 hover:bg-gray-900 text-white py-2 rounded"
         onClick={() => navigate("/student")}
       >
         Back to Student List

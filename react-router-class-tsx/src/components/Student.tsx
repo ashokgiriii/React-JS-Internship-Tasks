@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const students = [
   { name: "Janak Pathak", email: "jab@gmail.com", sId: 1 },
@@ -8,6 +8,7 @@ const students = [
 ];
 
 const Student = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-gray-200 p-4 max-w-md mx-auto mt-10 rounded">
       <h2 className="text-xl font-bold mb-4 text-center">Student List</h2>
@@ -21,6 +22,12 @@ const Student = () => {
           </li>
         ))}
       </ul>
+      <button
+        onClick={() => navigate("/")}
+        className="text-center w-full p-2 bg-gray-700 hover:bg-gray-800 text-green-600  cursor-pointer rounded-md mt-2"
+      >
+        Back to Home
+      </button>
     </div>
   );
 };
