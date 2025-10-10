@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+  background-color: #fafafa;
+}
+
+.container {
+  width: 100vw;
+}
+
+.card {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  margin-bottom: 100px;
+}
+
+.card.show {
+  opacity: 1;
+}

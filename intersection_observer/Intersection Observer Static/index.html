@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-bottom: 100px;
+      }
+      .card.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="width: 100vw">
+      <div class="card">
+        <img
+          src=""
+          alt=""
+          style="width: 200px; height: 200px; background-color: green"
+        />
+      </div>
+      <div class="card">
+        <img
+          src=""
+          alt=""
+          style="width: 200px; height: 200px; background-color: green"
+        />
+      </div>
+      <div class="card">
+        <img
+          src=""
+          alt=""
+          style="width: 200px; height: 200px; background-color: green"
+        />
+      </div>
+      <div class="card">
+        <img
+          src=""
+          alt=""
+          style="width: 200px; height: 200px; background-color: green"
+        />
+      </div>
+      <div class="card">
+        <img
+          src=""
+          alt=""
+          style="width: 200px; height: 200px; background-color: green"
+        />
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+            if (entry.isIntersecting) observer.unobserve(entry.target);
+          });
+        },
+        { rootMargin: "-100px" }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+    </script>
+  </body>
+</html>
