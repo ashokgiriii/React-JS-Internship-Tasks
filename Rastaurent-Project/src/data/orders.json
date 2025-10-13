@@ -1,0 +1,92 @@
+[
+  {
+    "orderId": "ORD-001",
+    "customer": "Ashok Giri",
+    "items": "Margherita Pizza, Caesar Salad",
+    "table": "T-12",
+    "total": "$32.50",
+    "status": "Delivered",
+    "time": "10 mins ago"
+  },
+  {
+    "orderId": "ORD-002",
+    "customer": "Rina Patel",
+    "items": "Paneer Tikka, Garlic Naan",
+    "table": "T-08",
+    "total": "$28.00",
+    "status": "In Progress",
+    "time": "5 mins ago"
+  },
+  {
+    "orderId": "ORD-003",
+    "customer": "John Doe",
+    "items": "Spaghetti Bolognese",
+    "table": "T-05",
+    "total": "$18.75",
+    "status": "Preparing",
+    "time": "2 mins ago"
+  },
+  {
+    "orderId": "ORD-004",
+    "customer": "Meera Shah",
+    "items": "Masala Dosa, Filter Coffee",
+    "table": "T-09",
+    "total": "$12.50",
+    "status": "Delivered",
+    "time": "15 mins ago"
+  },
+  {
+    "orderId": "ORD-005",
+    "customer": "Alex Kim",
+    "items": "Sushi Platter",
+    "table": "T-02",
+    "total": "$40.00",
+    "status": "Cancelled",
+    "time": "20 mins ago"
+  },
+  {
+    "orderId": "ORD-006",
+    "customer": "Fatima Noor",
+    "items": "Shawarma Wrap, Mint Lemonade",
+    "table": "T-03",
+    "total": "$22.00",
+    "status": "Ready",
+    "time": "Just now"
+  },
+  {
+    "orderId": "ORD-007",
+    "customer": "Carlos Vega",
+    "items": "Tacos, Nachos, Coke",
+    "table": "T-06",
+    "total": "$19.80",
+    "status": "Pending",
+    "time": "8 mins ago"
+  },
+  {
+    "orderId": "ORD-008",
+    "customer": "Nina Zhang",
+    "items": "Chow Mein, Spring Rolls",
+    "table": "T-10",
+    "total": "$25.60",
+    "status": "Preparing",
+    "time": "12 mins ago"
+  },
+  {
+    "orderId": "ORD-009",
+    "customer": "Liam Brown",
+    "items": "Burger, Fries, Milkshake",
+    "table": "T-01",
+    "total": "$15.90",
+    "status": "In Progress",
+    "time": "6 mins ago"
+  },
+  {
+    "orderId": "ORD-010",
+    "customer": "Sofia Russo",
+    "items": "Pasta Alfredo, Tiramisu",
+    "table": "T-11",
+    "total": "$30.00",
+    "status": "Ready",
+    "time": "Just now"
+  }
+]
