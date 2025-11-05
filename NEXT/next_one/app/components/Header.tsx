@@ -15,6 +15,15 @@ const Header = () => {
 
         <div className="flex justify-between px-10 py-4 bg-white shadow-lg">
             <Link className="text-2xl tracking-wider" href="/">Welcome Home</Link>
+
+            <ul className="flex items-center gap-4">
+                <li>
+                    <Link href="/article/breaking-news-123?lang=en">Read in English</Link>
+                </li>
+                <li>
+                    <Link href="/article/breaking-news-123?lang=np">Read in Nepali</Link>
+                </li>
+            </ul>
             <ul className="flex items-center gap-8">
                 {
                     navLinks.map((link) => {
